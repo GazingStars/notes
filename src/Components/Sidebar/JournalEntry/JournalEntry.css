@@ -1,0 +1,33 @@
+.journal-entry {
+  display: flex;
+  flex-direction: column;
+  background-color: #2a2a2a;
+  padding: 15px;
+  /* border-radius: 10px; */
+  gap: 20px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.date-preview {
+  display: flex;
+  gap: 10px;
+}
+
+.journal-entry:hover {
+  background-color: #3a3a3a;
+}
+
+.journal-entry h3 {
+  font-size: 1.2rem;
+}
+
+.date-preview span {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.date-preview p {
+  font-size: 0.8rem;
+  color: #888;
+}

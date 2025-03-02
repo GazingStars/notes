@@ -1,0 +1,36 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  width: 15%;
+  background-color: #1e1e1e;
+  padding: 20px;
+}
+
+.sidebar img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px; 
+  filter: brightness(0.9); 
+}
+
+.new-entry {
+  background-color: #2a2a2a;
+  border: 1px solid #333;
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+  /* border-radius: 8px; */
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.new-entry:hover {
+  background-color: #444;
+}
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

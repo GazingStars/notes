@@ -1,4 +1,10 @@
-html, body {
+@import url("./assets/fonts/stylesheet.css");
+:root {
+  --font-family: "Source Sans 3", sans-serif;
+}
+
+html,
+body {
   margin: 0;
   padding: 0;
 }

@@ -1,11 +1,13 @@
 import "./App.css";
-import Cookie from "./Cookie/Cookie";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import JournalContent from "./Components/Journal/JournalContent/JournalContent";
 
 function App() {
   return (
-    <>
-      <Cookie time = {200}/>
-    </>
+    <div className="app-container">
+      <Sidebar />
+      <JournalContent />
+    </div>
   );
 }
 
