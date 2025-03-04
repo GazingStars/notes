@@ -1,10 +1,18 @@
 import "./EntryHeader.css";
+import { useState } from "react";
 
-const EntryHeader = ({ title }) => {
+const EntryHeader = ({ text }) => {
+  const [value, setValue] = useState(text);
+
   return (
-    <div className="entry-header">
-      <h1>{title}</h1>
-    </div>
+    <input
+      name="header"
+      type="text"
+      className="entry-text"
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+      placeholder="Заголовок"
+    />
   );
 };
 export default EntryHeader;
