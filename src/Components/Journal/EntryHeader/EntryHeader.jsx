@@ -1,8 +1,12 @@
+import { useState, useEffect } from "react";
 import "./EntryHeader.css";
-import { useState } from "react";
 
 const EntryHeader = ({ text }) => {
-  const [value, setValue] = useState(text);
+  const [value, setValue] = useState(text || "");
+
+  useEffect(() => {
+    setValue(text || "");
+  }, [text]);
 
   return (
     <input
@@ -15,4 +19,5 @@ const EntryHeader = ({ text }) => {
     />
   );
 };
+
 export default EntryHeader;

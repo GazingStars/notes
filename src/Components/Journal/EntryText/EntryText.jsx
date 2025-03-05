@@ -1,8 +1,12 @@
+import { useState, useEffect } from "react";
 import "./EntryText.css";
-import { useState } from "react";
 
 const EntryText = ({ text }) => {
-  const [value, setValue] = useState(text);
+  const [value, setValue] = useState(text || "");
+
+  useEffect(() => {
+    setValue(text || "");
+  }, [text]);
 
   return (
     <input

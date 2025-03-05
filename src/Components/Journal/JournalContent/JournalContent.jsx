@@ -4,7 +4,7 @@ import EntryTags from "../EntryTags/EntryTags";
 import EntryText from "../EntryText/EntryText";
 import SaveButton from "../SaveButton/SaveButton";
 
-const JournalContent = ({ onSubmit }) => {
+const JournalContent = ({ onSubmit, selectedEntry }) => {
   const addJournalItem = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -14,11 +14,11 @@ const JournalContent = ({ onSubmit }) => {
 
   return (
     <main className="journal-content">
-      <form action="" onSubmit={addJournalItem}>
-        <EntryHeader />
+      <form onSubmit={addJournalItem}>
+        <EntryHeader text={selectedEntry ? selectedEntry.header : ""} />
         <div className="mt-1">
-          <EntryTags tags={["Спорт"]} date="21.06.2022" />
-          <EntryText />
+          <EntryTags tags={["Спорт"]} date={selectedEntry ? selectedEntry.date : "21.06.2022"} />
+          <EntryText text={selectedEntry ? selectedEntry.text : ""} />
         </div>
         <div className="mt-2">
           <SaveButton />
@@ -27,4 +27,5 @@ const JournalContent = ({ onSubmit }) => {
     </main>
   );
 };
+
 export default JournalContent;
